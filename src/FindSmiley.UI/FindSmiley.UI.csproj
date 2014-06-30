@@ -107,6 +107,7 @@
     <Content Include="content\touch-icon-ipad.png" />
     <Content Include="content\touch-icon-iphone-retina.png" />
     <Content Include="content\touch-icon-iphone.png" />
+    <Content Include="favicon.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
