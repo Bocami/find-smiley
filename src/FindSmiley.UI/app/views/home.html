@@ -1,0 +1,38 @@
+﻿<div class="jumbotron">
+    <div class="container">
+        <div class="page-header text-center">
+            <h1>Find Smiley</h1>
+        </div>
+        <p class="text-center">Tjek om virksomheder lever op til fødevarestyrelsens krav til hygiejne og selvkontrol.</p>
+        <p class="text-center">
+            <span class="smiley smiley-lg smiley-1"></span>
+            <span class="smiley smiley-lg smiley-2"></span>
+            <span class="smiley smiley-lg smiley-3"></span>
+            <span class="smiley smiley-lg smiley-4"></span>
+        </p>
+    </div>
+</div>
+<form class="form">
+    <div class="form-group">
+        <input type="search" ng-model="searchQuery.keywords" ng-change="search()" class="form-control input-lg" placeholder="Virksomhedsnavn, postadresse, postnummer, by" />
+    </div>
+</form>
+
+<div ng-repeat="document in searchResult.documents" class="kontrolrapport">
+    <div class="row">
+        <div class="col-sm-6">
+            <span ng-class="{ 'smiley smiley-elite pull-right': document.harEliteSmiley }"></span>
+            <h4>{{document.navn}}</h4>
+            <p>{{document.adresse}}, {{document.postnummer}} {{document.by}}</p>
+        </div>
+        <div class="col-sm-6">
+            <div ng-repeat="kontrolrapport in document.kontrolrapporter" class="text-center col-xs-3 kontrolrapport">
+                <a href="{{kontrolrapport.url}}">
+                    <span class="smiley smiley-sm smiley-{{kontrolrapport.resultat}}"></span><br />
+                    <time>{{kontrolrapport.kontroldato | amDateFormat:'DD. MMMM YYYY'}}</time>
+                </a>
+            </div>
+        </div>
+    </div>
+    <hr />
+</div>

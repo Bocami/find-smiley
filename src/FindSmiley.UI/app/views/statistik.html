@@ -1,0 +1,24 @@
+﻿<header class="page-header">
+    <h1>Statistik</h1>
+</header>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>År</th>
+            <th>Måned</th>
+            <th><span class="smiley smiley-sm smiley-1"></span></th>
+            <th><span class="smiley smiley-sm smiley-2"></span></th>
+            <th><span class="smiley smiley-sm smiley-3"></span></th>
+            <th><span class="smiley smiley-sm smiley-4"></span></th>
+        </tr>
+    </thead>
+    <tr ng-repeat="row in statistik2">
+        <td>{{row.key.year}}</td>
+        <td>{{row.key.month}}</td>
+        <td>{{Math.round(row.resultat1 / row.resultat * 100)}} %</td>
+        <td>{{Math.round(row.resultat2 / row.resultat * 100)}} %</td>
+        <td>{{Math.round(row.resultat3 / row.resultat * 100)}} %</td>
+        <td>{{Math.round(row.resultat4 / row.resultat * 100)}} %</td>
+    </tr>
+</table>

@@ -1,2 +1,2 @@
-find-smiley
+Find Smiley
 ===========
