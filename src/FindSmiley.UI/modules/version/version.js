@@ -24,7 +24,7 @@
                     console.log(version);
                 });
             }],
-            template: '<span class="version">Version {{version.major}}.{{version.minor}}.{{version.revision}}.{{version.build}}</span>'
+            template: '<span class="version"><span>Version {{version.major}}.{{version.minor}}<span class="hidden-xs">.{{version.revision}}.{{version.build}}</span></span>'
         };
     });
 
