@@ -34,7 +34,7 @@ namespace FindSmiley.API.Models.Import
 
         public void ImportDate(DateTime date)
         {
-            ImportRaw(string.Format("http://www.findsmiley.dk/da-DK/Searching/TableSearch.htm?searchstring=%25&vtype=detail&searchtype=all&mode=adv&display=table&branche=0&region=0&Kaede=0&dato1={0}&dato2={0}&pagesz=1000&sort=0&SearchExact=false&mapNElng=&mapNElat=&mapSWlng=&mapSWlat=", date.ToString("dd-MM-yyyy")));
+            Import(string.Format("http://www.findsmiley.dk/da-DK/Searching/TableSearch.htm?searchstring=%25&vtype=detail&searchtype=all&mode=adv&display=table&branche=0&region=0&Kaede=0&dato1={0}&dato2={0}&pagesz=1000&sort=0&SearchExact=false&mapNElng=&mapNElat=&mapSWlng=&mapSWlat=", date.ToString("dd-MM-yyyy")));
         }
 
         public string HttpGet(string url)
@@ -84,10 +84,8 @@ namespace FindSmiley.API.Models.Import
 
                 foreach (var kontrolrapportData in doc.FindKontrolrapporter())
                 {
-                    var kontrolrapport = context.Kontrolrapporter
-                        .Where(o => o.VirksomhedId == kontrolrapportData.VirksomhedId)
-                        .Where(o => o.Kontroldato == kontrolrapportData.Kontroldato)
-                        .FirstOrDefault();
+                    var kontrolrapport = context.Kontrolrapporter.
+                        FirstOrDefault(o => o.VirksomhedId == kontrolrapportData.VirksomhedId && o.Kontroldato == kontrolrapportData.Kontroldato);
 
                     if (kontrolrapport == null)
                     {
