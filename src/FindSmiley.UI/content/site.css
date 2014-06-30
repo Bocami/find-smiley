@@ -18,12 +18,12 @@ body {
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
-    height: 60px;
     background-color: #f5f5f5;
+    padding: 15px 0;
 }
 
-.text-muted {
-    margin: 20px 0;
+#footer p {
+    margin: 0;
 }
 
 .form-login {
@@ -95,8 +95,8 @@ body {
     height: 50px;
 }
 
-.kontrolrapport .col-sm-6 {
-    min-height: 100px;   
+.virksomhed .col-sm-6 {
+    min-height: 85px;   
 }
 
 .kontrolrapport time {
@@ -109,4 +109,37 @@ body {
     right: 0; 
     border: 0;
     z-index: 10000;
+}
+
+    .toolbar {
+        margin-bottom: 15px;
+    }
+
+    .toolbar form {
+        background: #f5f5f5;
+        padding: 15px;
+    }
+
+    .toolbar .form-group {
+        margin: 0;
+    }
+
+@media screen and (max-width: 769px) {
+  body {
+      padding-top: 46px;
+  }
+  
+    .toolbar .container {
+        padding: 0;   
+    }
+
+    .kontrolrapporter {
+        background: #f5f5f5;
+        padding: 15px;   
+    }
+
+    .kontrolrapporter h4 {
+        margin: 0 0 15px 0;
+        font-size: 0.9em;
+    }
 }
