@@ -62,7 +62,7 @@
     <Content Include="app\services\statistikService.js" />
     <Content Include="app\views\statistik.html" />
     <Content Include="content\bootstrap.min.css" />
-    <Content Include="content\site.css" />
+    <Content Include="content\app.css" />
     <Content Include="content\Sm1g.svg" />
     <Content Include="content\Sm2g.svg" />
     <Content Include="content\Sm3g.svg" />

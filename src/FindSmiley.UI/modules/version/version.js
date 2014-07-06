@@ -21,7 +21,6 @@
             controller: ['$scope', 'Version', function ($scope, Version) {
                 Version.getVersion().then(function (version) {
                     $scope.version = version;
-                    console.log(version);
                 });
             }],
             template: '<span class="version"><span>Version {{version.major}}.{{version.minor}}<span class="hidden-xs">.{{version.revision}}.{{version.build}}</span></span>'
