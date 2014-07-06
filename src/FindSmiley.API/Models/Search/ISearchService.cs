@@ -2,6 +2,6 @@
 {
     public interface ISearchService
     {
-        SearchResult Search(SearchQuery query);
+        Search Search(SearchQuery query);
     }
 }

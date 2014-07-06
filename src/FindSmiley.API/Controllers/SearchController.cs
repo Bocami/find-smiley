@@ -1,32 +1,21 @@
-﻿using System.Diagnostics;
+﻿using FindSmiley.API.Models.Search;
 using System.Web.Http;
-using FindSmiley.API.Models.Search;
 
 namespace FindSmiley.API.Controllers
 {
     public class SearchController : ApiController
     {
-        private readonly ISearchServiceFactory searchServiceFactory;
+        private readonly ISearchService searchService;
 
-        public SearchController()
+        public SearchController(ISearchService searchService)
         {
-            this.searchServiceFactory = new SearchServiceFactory();
+            this.searchService = searchService;
         }
 
         [HttpGet]
-        public SearchResult Search([FromUri]SearchQuery query)
+        public Search Search([FromUri]SearchQuery query)
         {
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
-            var searchService = searchServiceFactory.Create();
-
-            var searchResult = searchService.Search(query);
-
-            stopwatch.Stop();
-
-            Debug.WriteLine(stopwatch.ElapsedMilliseconds);
-
-            return searchResult;
+            return searchService.Search(query);
         }
     }
 }

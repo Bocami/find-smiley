@@ -95,6 +95,8 @@
     <Content Include="scripts\angular-route.min.js" />
     <Content Include="scripts\angular.js" />
     <Content Include="scripts\angular.min.js" />
+    <Content Include="scripts\geolocation.js" />
+    <Content Include="scripts\geoxml3.js" />
     <Content Include="scripts\moment-with-langs.js" />
     <Content Include="scripts\moment-with-langs.min.js" />
     <Content Include="scripts\moment.js" />
@@ -108,6 +110,7 @@
     <Content Include="content\touch-icon-iphone-retina.png" />
     <Content Include="content\touch-icon-iphone.png" />
     <Content Include="favicon.png" />
+    <Content Include="test.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

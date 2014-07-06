@@ -1,25 +1,21 @@
-﻿using System.Web.Http;
-using FindSmiley.API.Models.Virksomhed;
+﻿using System.Linq;
+using System.Web.Http;
+using FindSmiley.API.Models;
 
 namespace FindSmiley.API.Controllers
 {
     public class VirksomhedController : ApiController
     {
-        private readonly IVirksomhedService virksomhedService;
+        private readonly IVirksomhedRepository virksomhedRepository;
 
-        public VirksomhedController(IVirksomhedService virksomhedService)
+        public VirksomhedController(IVirksomhedRepository virksomhedRepository)
         {
-            this.virksomhedService = virksomhedService;
+            this.virksomhedRepository = virksomhedRepository;
         }
 
-        public VirksomhedDto[] Get()
+        public Virksomhed[] Get()
         {
-            return virksomhedService.HentVirksomheder();
-        }
-
-        public VirksomhedDto Get(int id)
-        {
-            return virksomhedService.HentVirksomhed(id);
+            return virksomhedRepository.ToArray();
         }
     }
 }

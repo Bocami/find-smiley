@@ -1,7 +1,9 @@
 using System;
-using FindSmiley.API.Models.Kontrolrapport;
+using System.Web.Hosting;
+using FindSmiley.API.Models;
 using Microsoft.Practices.Unity;
 using FindSmiley.API.Models.Version;
+using FindSmiley.API.Models.Search;
 
 namespace FindSmiley.API
 {
@@ -21,9 +23,11 @@ namespace FindSmiley.API
 
         public static void RegisterTypes(IUnityContainer container)
         {
+            container.RegisterType<IGeoDistanceCalculator, HaversineGeoDistanceCalculator>();
             container.RegisterType<IVersionService, VersionService>();
-
-            container.RegisterType<IKontrolrapportService, KontrolrapportService>();
+            container.RegisterType<IVirksomhedRepository, XmlVirksomhedRepository>(new ContainerControlledLifetimeManager(), new InjectionConstructor(HostingEnvironment.MapPath("~/App_Data/allekontrolresultater.xml")));
+            container.RegisterType<SearchIndex>(new ContainerControlledLifetimeManager());
+            container.RegisterType<ISearchService, SearchService>(new ContainerControlledLifetimeManager());
         }
     }
 }

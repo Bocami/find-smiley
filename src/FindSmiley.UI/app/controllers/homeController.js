@@ -1,8 +1,13 @@
 ﻿'use strict';
-app.controller('homeController', ['$scope', 'SearchService', function ($scope, SearchService) {
+app.controller('homeController', ['$scope', 'SearchService', 'geolocation', function ($scope, SearchService, geolocation) {
     $scope.searchQuery = {
-        keywords: null
+        keywords: null,
     };
+
+    geolocation.getLocation().then(function (data) {
+        $scope.searchQuery.latitude = data.coords.latitude;
+        $scope.searchQuery.longitude = data.coords.longitude;
+    });
 
     $scope.search = function () {
         if ($scope.searchQuery.keywords.length > 0) {

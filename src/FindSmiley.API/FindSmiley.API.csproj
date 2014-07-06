@@ -158,42 +158,51 @@
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityWebApiActivator.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\ImportController.cs" />
-    <Compile Include="Controllers\KontrolrapportController.cs" />
-    <Compile Include="Controllers\SearchController.cs" />
-    <Compile Include="Controllers\StatistikController.cs" />
+    <Compile Include="Controllers\PostnummerController.cs" />
+    <Compile Include="Controllers\SearchController.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Controllers\VersionController.cs" />
     <Compile Include="Controllers\VirksomhedController.cs" />
-    <Compile Include="Models\Import\HtmlDcoumentExtensions.cs" />
-    <Compile Include="Models\Import\ImportService.cs" />
-    <Compile Include="Models\Import\KontrolrapportData.cs" />
-    <Compile Include="Models\Import\VirksomhedData.cs" />
-    <Compile Include="Models\Kontrolrapport\Kontrolrapport.cs" />
-    <Compile Include="Models\Kontrolrapport\KontrolrapportService.cs" />
-    <Compile Include="Models\Postadresse.cs" />
-    <Compile Include="Models\Search\ISearchService.cs" />
-    <Compile Include="Models\Search\ISearchServiceFactory.cs" />
-    <Compile Include="Models\Search\SearchDocument.cs" />
-    <Compile Include="Models\Search\SearchIndex.cs" />
-    <Compile Include="Models\Search\SearchIndexEntry.cs" />
-    <Compile Include="Models\Search\SearchQuery.cs" />
+    <Compile Include="Models\Search\ISearchService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\Search\ISearchServiceFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\Search\SearchDocument.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\Search\SearchIndex.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\Search\SearchQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\Search\Search.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Models\Search\SearchResult.cs" />
-    <Compile Include="Models\Search\SearchService.cs" />
-    <Compile Include="Models\Search\SearchServiceFactory.cs" />
-    <Compile Include="Models\FindSmileyDbContext.cs" />
-    <Compile Include="Models\Statistik\IStatistikService.cs" />
-    <Compile Include="Models\Statistik\StatistikService.cs" />
+    <Compile Include="Models\Search\SearchService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\Geo.cs" />
+    <Compile Include="Models\HaversineGeoDistanceCalculator.cs" />
+    <Compile Include="Models\IGeoDistanceCalculator.cs" />
+    <Compile Include="Models\Kontrolrapport.cs" />
+    <Compile Include="Models\Postadresse.cs" />
     <Compile Include="Models\Version\IVersionService.cs" />
     <Compile Include="Models\Version\Version.cs" />
     <Compile Include="Models\Version\VersionService.cs" />
-    <Compile Include="Models\Virksomhed\IVirksomhedService.cs" />
-    <Compile Include="Models\Virksomhed\Virksomhed.cs" />
-    <Compile Include="Models\Virksomhed\VirksomhedDto.cs" />
-    <Compile Include="Models\Virksomhed\VirksomhedService.cs" />
+    <Compile Include="Models\IVirksomhedRepository.cs" />
+    <Compile Include="Models\Virksomhed.cs" />
+    <Compile Include="Models\Virksomhedstyper.cs" />
+    <Compile Include="Models\XmlVirksomhedRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\allekontrolresultater.xml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -208,8 +217,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\allepostnumredk.kml" />
     <None Include="Properties\PublishProfiles\Release.pubxml" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

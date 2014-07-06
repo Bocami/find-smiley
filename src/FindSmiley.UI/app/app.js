@@ -1,5 +1,5 @@
 ﻿'use strict';
-var app = angular.module('app', ['ngRoute', 'angularMoment', 'version']);
+var app = angular.module('app', ['ngRoute', 'angularMoment', 'version', 'geolocation']);
 
 app.config(function ($routeProvider) {
 

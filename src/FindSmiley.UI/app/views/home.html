@@ -26,18 +26,18 @@
 </div>
 
 <div class="container">
-    <div ng-repeat="document in searchResult.documents" class="virksomhed">
+    <div ng-repeat="result in searchResult.results" class="virksomhed">
         <div class="row">
             <div class="col-sm-6">
-                <span ng-class="{ 'smiley smiley-elite pull-right': document.harEliteSmiley }"></span>
-                <h4>{{document.navn}}</h4>
-                <p>{{document.adresse}}, {{document.postnummer}} {{document.by}}</p>
+                <span ng-class="{ 'smiley smiley-elite pull-right': result.virksomhed.harEliteSmiley }"></span>
+                <h4>{{result.virksomhed.navn}} ({{result.distance | number: 2 }}km)</h4>
+                <p>{{result.virksomhed.postadresse.adresse1}}, {{result.virksomhed.postadresse.postnummer}} {{result.virksomhed.postadresse.by}}</p>
             </div>
             <div class="col-sm-6">
                 <div class="kontrolrapporter clearfix">
                     <h4 class="text-muted visible-xs">Kontrolrapporter</h4>
-                    <div ng-repeat="kontrolrapport in document.kontrolrapporter" class="text-center col-xs-3 kontrolrapport">
-                        <a href="{{kontrolrapport.url}}">
+                    <div ng-repeat="kontrolrapport in result.virksomhed.kontrolrapporter" class="text-center col-xs-3 kontrolrapport">
+                        <a href="http://www.findsmiley.dk/KontrolRapport.aspx?id={{kontrolrapport.virksomhedId}}&akt={{kontrolrapport.akt}}">
                             <span class="smiley smiley-sm smiley-{{kontrolrapport.resultat}}"></span><br />
                             <time>{{kontrolrapport.kontroldato | amDateFormat:'DD. MMMM YYYY'}}</time>
                         </a>

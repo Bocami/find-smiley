@@ -13,7 +13,6 @@ namespace FindSmiley.API
     {
         public void Configuration(IAppBuilder app)
         {
-            Database.SetInitializer(new SmileyDbContextDbInitializer());
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
             app.UseWebApi(GlobalConfiguration.Configuration);

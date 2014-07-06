@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>KML Layers</title>
+    <style>
+        html, body, #map-canvas {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script src="scripts/geoxml3.js"></script>
+    <script>
+        var map;
+
+        function initialize() {
+            var chicago = new google.maps.LatLng(55.6760968, 12.5683371);
+            var mapOptions = {
+                zoom: 11,
+                center: chicago
+            }
+
+            map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+            var myParser = new geoXML3.parser({ map: map });
+            myParser.parse('api/postnummer');
+
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+</head>
+<body>
+    <div id="map-canvas"></div>
+</body>
+</html>
