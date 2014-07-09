@@ -1,0 +1,8 @@
+/* TEAM */
+	Developer: Jonatan Pedersen
+	Twitter: @jonatanpedersen
+	From: Copenhagen, Denmark
+
+/* SITE */
+	Last update: 2014/07/09
+	Language: Danish

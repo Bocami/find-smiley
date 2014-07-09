@@ -1,17 +1,15 @@
 ﻿<div class="container">
     <div class="jumbotron hidden-xs">
-        <div class="container">
-            <div class="page-header text-center">
-                <h1>Find Smiley</h1>
-            </div>
-            <p class="text-center">Tjek om virksomheder lever op til hygiejne og selvkontrol krav.</p>
-            <p class="text-center">
-                <span class="smiley smiley-lg smiley-1"></span>
-                <span class="smiley smiley-lg smiley-2"></span>
-                <span class="smiley smiley-lg smiley-3"></span>
-                <span class="smiley smiley-lg smiley-4"></span>
-            </p>
+        <div class="page-header text-center">
+            <h1>Find Smiley</h1>
         </div>
+        <p class="text-center">Tjek om virksomheder lever op til hygiejne og selvkontrol krav.</p>
+        <p class="text-center">
+            <span class="smiley smiley-lg smiley-1"></span>
+            <span class="smiley smiley-lg smiley-2"></span>
+            <span class="smiley smiley-lg smiley-3"></span>
+            <span class="smiley smiley-lg smiley-4"></span>
+        </p>
     </div>
 </div>
 
@@ -28,7 +26,6 @@
 <div class="container">
     <div ng-show="isWorking" class="working">
     </div>
-
     <div ng-show="!isWorking" ng-repeat="result in searchResult.results" class="virksomhed">
         <div class="row">
             <div class="col-sm-6">

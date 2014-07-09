@@ -1,5 +1,5 @@
 ﻿'use strict';
-var app = angular.module('app', ['ngRoute', 'angularMoment', 'version', 'geolocation', 'lastUpdatedModule']);
+var app = angular.module('app', ['ngRoute', 'angularMoment', 'version', 'geolocation', 'lastUpdatedModule', 'releaseModule']);
 
 app.config(function ($routeProvider) {
 
@@ -8,9 +8,9 @@ app.config(function ($routeProvider) {
         templateUrl: "/app/views/home.html"
     });
 
-    $routeProvider.when("/statistik", {
-        controller: "statistikController",
-        templateUrl: "/app/views/statistik.html"
+    $routeProvider.when("/udgivelsesnotater", {
+        controller: "releaseController",
+        templateUrl: "/modules/release/release.html"
     });
 
     $routeProvider.otherwise({ redirectTo: "/" });

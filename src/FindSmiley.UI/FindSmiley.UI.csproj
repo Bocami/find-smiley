@@ -57,12 +57,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\controllers\statistikController.js" />
+    <Content Include="modules\release\release.html" />
     <Content Include="content\working.gif" />
+    <Content Include="humans.txt" />
     <Content Include="modules\lastUpdated\lastUpdated.js" />
     <Content Include="app\directives\focus.js" />
-    <Content Include="app\services\statistikService.js" />
-    <Content Include="app\views\statistik.html" />
     <Content Include="content\bootstrap.min.css" />
     <Content Include="content\app.css" />
     <Content Include="content\Sm1g.svg" />
@@ -71,6 +70,9 @@
     <Content Include="content\Sm4g.svg" />
     <Content Include="content\SmE_gr.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="modules\release\release.css" />
+    <Content Include="modules\release\release.js" />
+    <Content Include="robots.txt" />
     <Content Include="scripts\angular-moment.min.js" />
     <Content Include="scripts\angular.min.js.map" />
     <Content Include="packages.config" />
@@ -82,6 +84,7 @@
     <Content Include="scripts\angular-moment.min.js.map">
       <DependentUpon>angular-moment.min.js</DependentUpon>
     </Content>
+    <Content Include="releases.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

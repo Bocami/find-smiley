@@ -23,7 +23,7 @@
                     $scope.version = version;
                 });
             }],
-            template: '<span class="version"><span>Version {{version.major}}.{{version.minor}}<span class="hidden-xs">.{{version.revision}}.{{version.build}}</span></span>'
+            template: '<span class="version"><span>Version {{version.major}}.{{version.minor}}</span></span>'
         };
     });
 

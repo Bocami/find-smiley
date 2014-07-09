@@ -12,6 +12,9 @@ body {
       padding-top: 40px;
   }
 
+.footer {
+    margin: 15px 0;
+}
 
 .footer .section {
     display: inline-block;
