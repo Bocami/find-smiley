@@ -23,9 +23,10 @@ namespace FindSmiley.API
 
         public static void RegisterTypes(IUnityContainer container)
         {
+            container.RegisterType<ILastUpdatedService, LastUpdatedService>(new InjectionConstructor("~/App_Data/allekontrolresultater.xml"));
             container.RegisterType<IGeoDistanceCalculator, HaversineGeoDistanceCalculator>();
             container.RegisterType<IVersionService, VersionService>();
-            container.RegisterType<IVirksomhedRepository, XmlVirksomhedRepository>(new ContainerControlledLifetimeManager(), new InjectionConstructor(HostingEnvironment.MapPath("~/App_Data/allekontrolresultater.xml")));
+            container.RegisterType<IVirksomhedRepository, XmlVirksomhedRepository>(new ContainerControlledLifetimeManager(), new InjectionConstructor("~/App_Data/allekontrolresultater.xml"));
             container.RegisterType<SearchIndex>(new ContainerControlledLifetimeManager());
             container.RegisterType<ISearchService, SearchService>(new ContainerControlledLifetimeManager());
         }

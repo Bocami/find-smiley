@@ -26,7 +26,10 @@
 </div>
 
 <div class="container">
-    <div ng-repeat="result in searchResult.results" class="virksomhed">
+    <div ng-show="isWorking" class="working">
+    </div>
+
+    <div ng-show="!isWorking" ng-repeat="result in searchResult.results" class="virksomhed">
         <div class="row">
             <div class="col-sm-6">
                 <span ng-class="{ 'smiley smiley-elite pull-right': result.virksomhed.harEliteSmiley }"></span>

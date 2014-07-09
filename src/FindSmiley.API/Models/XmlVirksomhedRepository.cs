@@ -1,25 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Web.Hosting;
 using System.Xml;
 
 namespace FindSmiley.API.Models
 {
     public class XmlVirksomhedRepository : IVirksomhedRepository
     {
-        private readonly string filename;
+        private readonly string virtualPath;
 
-        public XmlVirksomhedRepository(string filename)
+        public XmlVirksomhedRepository(string virtualPath)
         {
-            this.filename = filename;
+            this.virtualPath = virtualPath;
         }
 
         private IEnumerable<Virksomhed> Virksomheder
         {
             get
             {
+                var physicalPath = HostingEnvironment.MapPath(virtualPath);
+
+                if (physicalPath == null)
+                    throw new InvalidOperationException("File not found");
+
                 XmlDocument xmlDocument = new XmlDocument();
-                xmlDocument.Load(filename);
+                xmlDocument.Load(physicalPath);
 
                 foreach (XmlNode row in xmlDocument.GetElementsByTagName("row"))
                 {

@@ -1,4 +1,5 @@
-﻿using FindSmiley.API.Models.Search;
+﻿using System.Threading;
+using FindSmiley.API.Models.Search;
 using System.Web.Http;
 
 namespace FindSmiley.API.Controllers

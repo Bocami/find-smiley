@@ -58,6 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\controllers\statistikController.js" />
+    <Content Include="content\working.gif" />
+    <Content Include="modules\lastUpdated\lastUpdated.js" />
     <Content Include="app\directives\focus.js" />
     <Content Include="app\services\statistikService.js" />
     <Content Include="app\views\statistik.html" />
@@ -77,6 +79,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <None Include="Properties\PublishProfiles\Release.pubxml" />
+    <Content Include="scripts\angular-moment.min.js.map">
+      <DependentUpon>angular-moment.min.js</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

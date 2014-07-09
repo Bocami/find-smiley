@@ -158,12 +158,14 @@
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityWebApiActivator.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\LastUpdatedController.cs" />
     <Compile Include="Controllers\PostnummerController.cs" />
     <Compile Include="Controllers\SearchController.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Controllers\VersionController.cs" />
     <Compile Include="Controllers\VirksomhedController.cs" />
+    <Compile Include="Models\LastUpdatedModels.cs" />
     <Compile Include="Models\Search\ISearchService.cs">
       <SubType>Code</SubType>
     </Compile>
