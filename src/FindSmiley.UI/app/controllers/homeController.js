@@ -23,7 +23,7 @@ app.controller('homeController', ['$scope', '$timeout', 'SearchService', 'geoloc
 
         $scope.timer = $timeout(function () {
             $scope.isWorking = true;
-        }, 100);
+        }, 250);
     };
 
     $scope.search = function () {
