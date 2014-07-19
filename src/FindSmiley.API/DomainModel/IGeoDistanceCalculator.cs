@@ -1,4 +1,4 @@
-﻿namespace FindSmiley.API.Models
+﻿namespace FindSmiley.API.DomainModel
 {
     public interface IGeoDistanceCalculator
     {

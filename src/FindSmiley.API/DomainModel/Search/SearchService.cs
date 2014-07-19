@@ -1,7 +1,8 @@
 ﻿using System.Diagnostics;
 using System.Linq;
+using System.Threading.Tasks;
 
-namespace FindSmiley.API.Models.Search
+namespace FindSmiley.API.DomainModel.Search
 {
     public class SearchService : ISearchService
     {
@@ -14,7 +15,7 @@ namespace FindSmiley.API.Models.Search
             this.geoDistanceCalculator = geoDistanceCalculator;
         }
 
-        public Search Search(SearchQuery query)
+        public async Task<Search> Search(SearchQuery query)
         {
             if (query.Keywords == null)
                 return new Search()

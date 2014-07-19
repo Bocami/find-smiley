@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FindSmiley.API.Models
+namespace FindSmiley.API.DomainModel
 {
     public class HaversineGeoDistanceCalculator : IGeoDistanceCalculator
     {

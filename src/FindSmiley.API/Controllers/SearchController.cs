@@ -1,6 +1,7 @@
 ﻿using System.Threading;
-using FindSmiley.API.Models.Search;
 using System.Web.Http;
+using System.Threading.Tasks;
+using FindSmiley.API.DomainModel.Search;
 
 namespace FindSmiley.API.Controllers
 {
@@ -14,9 +15,9 @@ namespace FindSmiley.API.Controllers
         }
 
         [HttpGet]
-        public Search Search([FromUri]SearchQuery query)
+        public async Task<Search> Search([FromUri]SearchQuery query)
         {
-            return searchService.Search(query);
+            return await searchService.Search(query);
         }
     }
 }

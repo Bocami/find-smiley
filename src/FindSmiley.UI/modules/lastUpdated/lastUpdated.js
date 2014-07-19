@@ -10,7 +10,7 @@
                     method: 'get',
                     url: 'Api/LastUpdated'
                 }).then(function(response) {
-                    return response.data;
+                    return response.data.lastUpdated;
                 });
             };
         };

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace FindSmiley.API.Models.Search
+namespace FindSmiley.API.DomainModel.Search
 {
     public class SearchIndex
     {

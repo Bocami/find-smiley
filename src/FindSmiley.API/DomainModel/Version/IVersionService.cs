@@ -1,4 +1,4 @@
-﻿namespace FindSmiley.API.Models.Version
+﻿namespace FindSmiley.API.DomainModel.Version
 {
     public interface IVersionService
     {

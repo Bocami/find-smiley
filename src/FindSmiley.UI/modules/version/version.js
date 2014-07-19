@@ -3,13 +3,13 @@
 
     var version = angular.module('version', []);
 
-    version.constant('baseUrl', '/api/');
+    version.constant('baseUrl', '/Api/');
 
     version.factory('Version', ['$http', 'baseUrl', function ($http, baseUrl) {
         return {
             getVersion: function () {
-                return $http.get(baseUrl + 'version').then(function (result) {
-                    return result.data;
+                return $http.get(baseUrl + 'Version').then(function (result) {
+                    return result.data.version;
                 });
             }
         };

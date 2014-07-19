@@ -1,6 +1,9 @@
 ﻿using System.Linq;
 using System.Net.Http.Formatting;
 using System.Web.Http;
+using System.Web.Http.Dispatcher;
+using Bocami.Practices.Query.WebApi;
+using Bocami.Practices.WebApi;
 using Newtonsoft.Json.Serialization;
 
 namespace FindSmiley.API
@@ -16,6 +19,16 @@ namespace FindSmiley.API
                 name: "DefaultApi",
                 routeTemplate: "{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
+            );
+
+            config.RegisterCompositeHttpControllerTypeResolver(
+                new QueryHttpControllerTypeResolver(),
+                new DefaultHttpControllerTypeResolver()
+            );
+
+            config.RegisterCompositeHttpControllerSelector(
+                new FirstGenericTypeArgumentAsControllerNameHttpControllerSelector(config),
+                new DefaultHttpControllerSelector(config)
             );
 
             config.Formatters.Remove(config.Formatters.XmlFormatter);

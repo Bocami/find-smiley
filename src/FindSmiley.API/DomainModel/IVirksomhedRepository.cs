@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace FindSmiley.API.Models
+namespace FindSmiley.API.DomainModel
 {
     public interface IVirksomhedRepository : IEnumerable<Virksomhed>
     {        

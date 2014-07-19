@@ -1,9 +1,7 @@
-﻿using System.Data.Entity;
-using System.Web.Http;
-using FindSmiley.API;
-using FindSmiley.API.Models;
+﻿using FindSmiley.API;
 using Microsoft.Owin;
 using Owin;
+using System.Web.Http;
 
 [assembly: OwinStartup(typeof(Startup))]
 

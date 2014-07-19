@@ -16,10 +16,10 @@ body {
     margin: 15px 0;
 }
 
-.footer .section {
-    display: inline-block;
-    margin: 5px 15px;
+.footer .col-lg-4 {
+    margin-bottom: 15px;   
 }
+
 
 #footer p {
     margin: 0;
@@ -154,7 +154,6 @@ body {
         hr {
             border-color: transparent;
         }
-
 }
 
 .working {

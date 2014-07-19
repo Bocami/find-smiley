@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Web.Hosting;
 using System.Xml;
 
-namespace FindSmiley.API.Models
+namespace FindSmiley.API.DomainModel
 {
     public class XmlVirksomhedRepository : IVirksomhedRepository
     {

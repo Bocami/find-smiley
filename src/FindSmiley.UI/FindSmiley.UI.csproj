@@ -73,10 +73,9 @@
     <Content Include="modules\release\release.css" />
     <Content Include="modules\release\release.js" />
     <Content Include="robots.txt" />
+    <Content Include="scripts\angular-mocks.js" />
     <Content Include="scripts\angular-moment.min.js" />
-    <Content Include="scripts\angular.min.js.map" />
     <Content Include="packages.config" />
-    <Content Include="scripts\angular-route.min.js.map" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -85,6 +84,12 @@
       <DependentUpon>angular-moment.min.js</DependentUpon>
     </Content>
     <Content Include="releases.json" />
+    <Content Include="scripts\angular-route.js" />
+    <Content Include="scripts\angular-route.min.js" />
+    <Content Include="scripts\angular.js" />
+    <Content Include="scripts\angular.min.js" />
+    <Content Include="scripts\angular.min.js.map" />
+    <Content Include="scripts\angular-route.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -99,11 +104,6 @@
     <Content Include="app\views\home.html" />
     <Content Include="modules\version\version.js" />
     <Content Include="index.html" />
-    <Content Include="scripts\angular-mocks.js" />
-    <Content Include="scripts\angular-route.js" />
-    <Content Include="scripts\angular-route.min.js" />
-    <Content Include="scripts\angular.js" />
-    <Content Include="scripts\angular.min.js" />
     <Content Include="scripts\geolocation.js" />
     <Content Include="scripts\geoxml3.js" />
     <Content Include="scripts\moment-with-langs.js" />

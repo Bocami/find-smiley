@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.Hosting;
 
-namespace FindSmiley.API.Models
+namespace FindSmiley.API.DomainModel.LastUpdated
 {
     public class LastUpdated
     {

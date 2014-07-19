@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace FindSmiley.API.Models.Version
+namespace FindSmiley.API.DomainModel.Version
 {
     public class VersionService : IVersionService
     {

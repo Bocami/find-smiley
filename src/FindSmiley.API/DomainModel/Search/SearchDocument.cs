@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-
-namespace FindSmiley.API.Models.Search
+namespace FindSmiley.API.DomainModel.Search
 {
     public class SearchDocument
     {
