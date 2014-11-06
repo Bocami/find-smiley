@@ -1,7 +1,7 @@
 Find Smiley
 ===========
 
-Responsive version of [Find Smiley](http://www.findsmiley.dk/da-DK/index.htm).
+Find Smiley is available here https://findsmiley.bocami.com, and it is a faster and  responsive version of [Find Smiley](http://www.findsmiley.dk/da-DK/index.htm).
 
 ## Licence
 The MIT License (MIT)
